@@ -1,0 +1,17 @@
+{
+  "name": "kat_presentation_example",
+  "packageManager": "yarn@3.2.2",
+  "engines": {
+    "node": "16.15.0"
+  },
+  "private": "true",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "docker-compose -f docker-compose.yml -f ./packages/database/docker-compose.database.yml up",
+    "stop": "docker-compose down --remove-orphans",
+    "prune-db": "docker volume rm kat_presentation_example_mongodb_data",
+    "logs": "yarn docker-compose logs -f"
+  }
+}

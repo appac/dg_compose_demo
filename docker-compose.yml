@@ -1,0 +1,7 @@
+version: '3.8'
+
+networks:
+  backend:
+
+volumes:
+  mongodb_data:
