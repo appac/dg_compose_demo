@@ -12,6 +12,6 @@
     "start": "docker-compose -f docker-compose.yml -f ./packages/database/docker-compose.database.yml up",
     "stop": "docker-compose down --remove-orphans",
     "prune-db": "docker volume rm kat_presentation_example_mongodb_data",
-    "logs": "yarn docker-compose logs -f"
+    "logs": "docker-compose -f docker-compose.yml -f ./packages/database/docker-compose.database.yml logs -f"
   }
 }
